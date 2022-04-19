@@ -1,0 +1,12 @@
+.services h1{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.about-container{
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}

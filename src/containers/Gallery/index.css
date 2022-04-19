@@ -1,0 +1,29 @@
+.Gallery h1{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.Gallery h3{
+    color: var(--color-text);
+    font-weight: 500;
+}
+.gallery-section{
+    display: flex !important;
+}
+
+.Gallery-container{
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+}
+.gallery-warapper{
+    display:flex;
+}
+
+@media screen and (max-width: 480px) {
+    .Gallery-container{
+        padding: 0;
+    }
+}
