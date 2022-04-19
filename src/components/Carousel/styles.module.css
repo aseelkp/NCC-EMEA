@@ -1,0 +1,17 @@
+.achivementWrapper{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items: center;
+}
+.achivementImg{
+    width:230px;
+    border-radius:8px;
+    margin:10px 5px;
+    transition:transfrom .5s;  
+}
+.achivementImg:hover{
+    transform:scale(1.01);
+}
