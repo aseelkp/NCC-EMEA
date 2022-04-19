@@ -1,17 +1,19 @@
-import React from "react";
-import { About } from "../../components";
+import React, { useState } from "react";
+import { About, HoverCard } from "../../components";
 import "./index.css";
-
-
+import { aboutData } from "./aboutConfig";
 function AboutNCC() {
+  const [selectedCard, setSelectedCard] = useState(null);
+  const handleShowMore = (selectData) => (e) => setSelectedCard(selectData);
+
+  const handleCloseShowMore = () => setSelectedCard(null);
   return (
     <div className="about section-margin" id="about">
       <h1 className="gradient-text">About</h1>
       <div className="about-container">
-        <About
-          title="AIM OF NCC"
-          text="  The ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stThe ‘Aims’ of the NCC laid out in 1988 have stood the test of time and continue to meet the requirements expected of it in the current socio–economic scenario of the country."
-        />
+        {aboutData.map((data) => (
+          <About data={data} showMoreHandler={handleShowMore} />
+        ))}
         {/* <About
           title="MOTTO OF NCC"
           text="The need for having motto for the Corps was discussed in the 11th Central Advisory Committee (CAC) meeting held on 11 Aug 1978."
@@ -36,6 +38,9 @@ function AboutNCC() {
                 Ho, Ho, Ho, Ek Hai.
                 Hum Sab Bharatiya Hain."
         /> */}
+        {selectedCard && (
+          <HoverCard data={selectedCard} closeHandler={handleCloseShowMore} />
+        )}
       </div>
     </div>
   );
