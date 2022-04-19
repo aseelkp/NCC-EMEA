@@ -1,5 +1,5 @@
 import React from 'react'
-import { CarousalApp } from '../../components'
+import { AchievementApp } from '../../components'
 import './works.css'
 
 function Achievements() {
@@ -8,7 +8,7 @@ function Achievements() {
         <h1 className='gradient-text'>Achievements</h1>
         <h3>Check Out Some of our Achievements.</h3>
             <div className='achievement-container'>
-                < CarousalApp />
+                < AchievementApp />
             </div>
         </div>
     )

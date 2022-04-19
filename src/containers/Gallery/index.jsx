@@ -1,8 +1,5 @@
 import React from "react";
-import { GalleryApp } from "../../components";
-// import { render } from 'react-dom';
-// import { IMAGES } from "../../components";
-// import Gallery  from "react-grid-gallery";
+import {CarouselApp} from "../../components/index";
 import "./index.css";
 
 
@@ -11,7 +8,7 @@ function gallerySection() {
     <div className="gallery section-margin" id="gallery">
       <h1 className="gradient-text">Gallery</h1>
       <div className="Gallery-container">
-         {/* <GalleryApp /> */}
+        <CarouselApp />
       </div>
     </div>
   );

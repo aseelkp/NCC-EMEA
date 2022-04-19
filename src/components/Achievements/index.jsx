@@ -1,8 +1,7 @@
-import { Carousel } from "react-carousel-minimal";
 import AchievementImgs from "../../assets/achievements/index";
 import styles from "./styles.module.css";
 
-function CarouselApp() {
+function AchievementApp() {
   const data = [
     {
       image: AchievementImgs[0],
@@ -35,4 +34,4 @@ function CarouselApp() {
   );
 }
 
-export default CarouselApp;
+export default AchievementApp;

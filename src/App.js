@@ -16,7 +16,6 @@ const App = () => {
             <AboutNCC />
             <Achievements />
             <Gallery />
-            <GalleryApp />
             <Contact />
             <Footer />
 

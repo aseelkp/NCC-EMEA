@@ -13,7 +13,7 @@
 
 .Gallery-container{
     display: flex;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     flex-wrap: wrap;
     padding: 2rem;
     justify-content: center;
