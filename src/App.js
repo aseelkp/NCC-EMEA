@@ -1,7 +1,7 @@
 import React from 'react'
 
 //Custom components
-import { Footer, Achievements, AboutNCC, Hero,  SocialMedias, About ,Gallery } from './containers'
+import { Footer, Achievements, AboutNCC, Hero,  SocialMedias, About ,Gallery ,ProgramSection } from './containers'
 import { Contact, GalleryApp, Navbar ,   } from './components'
 import './App.css'
 
@@ -15,6 +15,7 @@ const App = () => {
             <SocialMedias />
             <AboutNCC />
             <Achievements />
+            <ProgramSection />
             <Gallery />
             <Contact />
             <Footer />

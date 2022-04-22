@@ -18,7 +18,8 @@
     color: #fff;
     margin-top: 1rem;
 }
-.btn a{
+button{
+    color: #fff;
     background-color: #ff4820;
     height: 30px;
     width: 85px;
@@ -28,7 +29,7 @@
     align-items: center;
     transition: 0.3s;
 }
-btn a :hover{
+button :hover{
     background-color: #4d1d13;
     color: #ff4820;
 }

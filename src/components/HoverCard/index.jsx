@@ -11,7 +11,7 @@ function hovercard({ data,closeHandler }) {
           <span className="titleTxt">{title}</span>
           <CloseIcon className="closeIcon" onClick={closeHandler}/>
         </h2>
-        <p className="slctContent">{content}</p>
+        <p className="slctContent">{content()}</p>
       </div>
     </div>
   );

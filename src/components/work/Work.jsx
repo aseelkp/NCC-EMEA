@@ -1,7 +1,7 @@
 import React from 'react'
 import './work.css'
 
-function Programs({ image, title, subTitle, text, codeLink, liveLink }) {
+function Programs({ image, title, text, codeLink, }) {
     return (
         <div className='work-grid'>
             <div className='work-grid-image'>
@@ -9,12 +9,10 @@ function Programs({ image, title, subTitle, text, codeLink, liveLink }) {
             </div>
             <div className='work-grid-body'>
                 <h2>{title}</h2>
-                <h4>{subTitle}</h4>
                 <p>{text}</p>
 
                 <div className='work-grid-body-btn'>
                     <a href={codeLink} target="_blank">Details</a>
-                    {liveLink && <a href={liveLink} target="_blank">Live App</a> }
                 </div>
 
             </div>

@@ -56,7 +56,7 @@ function CarouselApp() {
              <Carousel          
                data={data}
                time={2000}
-               width="1000px"
+               width="850px"
                height="500px"
                captionStyle={captionStyle}
                radius="10px"
@@ -71,8 +71,8 @@ function CarouselApp() {
                slideImageFit="cover"
                style={{
                  textAlign: "center",
-                 maxWidth: "100%",
-                 maxHeight: "100%",
+                 maxWidth: "850px",
+                 maxHeight: "500px",
                  margin: "40px auto",
                }}
              />
