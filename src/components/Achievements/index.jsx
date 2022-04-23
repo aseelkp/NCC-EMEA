@@ -1,7 +1,12 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import AchievementImgs from "../../assets/achievements/index";
 import styles from "./styles.module.css";
+import apiEndpoints from "../../apiEndpoints";
+import useApiCall from "../../utils/useApiCall";
 
 function AchievementApp() {
+  const [achievements] = useApiCall("achievement");
   const data = [
     {
       image: AchievementImgs[0],
@@ -22,11 +27,11 @@ function AchievementApp() {
 
   return (
     <div className={styles.achivementWrapper}>
-      {data.map((img, index) => (
+      {achievements.map((achievement) => (
         <img
-          key={index}
-          src={img.image}
-          alt="Achievement"
+          key={achievement.id}
+          src={achievement.image}
+          alt={achievement.title}
           className={styles.achivementImg}
         />
       ))}

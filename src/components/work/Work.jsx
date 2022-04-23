@@ -1,18 +1,19 @@
 import React from 'react'
 import './work.css'
 
-function Programs({ image, title, text, codeLink, }) {
+function Programs({ event}) {
+    const { name, description, image } = event;
     return (
         <div className='work-grid'>
             <div className='work-grid-image'>
                 <img src={image} alt='image' />
             </div>
             <div className='work-grid-body'>
-                <h2>{title}</h2>
-                <p>{text}</p>
+                <h2>{name}</h2>
+                <p>{description}</p>
 
                 <div className='work-grid-body-btn'>
-                    <a href={codeLink} target="_blank">Details</a>
+                    <a target="_blank">Details</a>
                 </div>
 
             </div>
