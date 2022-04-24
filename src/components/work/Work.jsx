@@ -2,7 +2,7 @@ import React from 'react'
 import './work.css'
 
 function Programs({ event}) {
-    const { name, description, image } = event;
+    const { name, description, image,doc } = event;
     return (
         <div className='work-grid'>
             <div className='work-grid-image'>
@@ -13,7 +13,7 @@ function Programs({ event}) {
                 <p>{description}</p>
 
                 <div className='work-grid-body-btn'>
-                    <a target="_blank">Details</a>
+                    <a href={doc} target="_blank">Details</a>
                 </div>
 
             </div>
